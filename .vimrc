@@ -18,7 +18,7 @@ set tabstop=4
 
 " for a file with no filetype-specific indentation rules, keep same level
 " of indentation
-set autoindent
+"set autoindent
 
 " use case insenstive search, except when using capital letters
 set ignorecase
