@@ -27,3 +27,9 @@ set smartcase
 " map Shift-H/L to moving between tabs
 nnoremap <S-h> gT
 nnoremap <S-l> gt
+
+" configure indent based folding
+set foldcolumn=1
+set foldlevel=4
+set foldmethod=indent
+set shiftwidth=4
