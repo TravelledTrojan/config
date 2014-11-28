@@ -1,3 +1,9 @@
+" turn on syntax highlighting
+syntax on
+
+" detect filetype and adjust indentation according to plugins
+filetype plugin indent on
+
 " show line numbers in left column
 set number
 
