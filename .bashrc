@@ -9,7 +9,8 @@
 # Light Gray  0;37     White         1;37
 
 # Nice coloring for prompt
-PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[0;37m\]'
+# PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;32m\]\$\[\e[m\] '
+PS1='(\[\e[0;32m\]\u\[\e[m\]\[\e[1;34m\]@\[\e[m\]\[\e[0;32m\]\h\[\e[m\]) \[\e[1;34m\]\w\[\e[m\] \[\e[0;32m\]\$\[\e[m\] '
 
 # Enable `ls` usage of colors
 export CLICOLOR=1
