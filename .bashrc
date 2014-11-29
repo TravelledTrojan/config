@@ -8,14 +8,25 @@
 # Brown       0;33     Yellow        1;33
 # Light Gray  0;37     White         1;37
 
-# Nice coloring for prompt
-# PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;32m\]\$\[\e[m\] '
-PS1='(\[\e[0;32m\]\u\[\e[m\]\[\e[1;34m\]@\[\e[m\]\[\e[0;32m\]\h\[\e[m\]) \[\e[1;34m\]\w\[\e[m\] \[\e[0;32m\]\$\[\e[m\] '
-
 # Enable `ls` usage of colors
 export CLICOLOR=1
 
-
-
 export GITHUB=https://github.com/TravelledTrojan
 
+# Nice Coloring for prompt with a special tag
+# original: PS1='(\[\e[0;32m\]\u\[\e[m\]\[\e[1;34m\]@\[\e[m\]\[\e[0;32m\]\h\[\e[m\]) \[\e[1;34m\]\w\[\e[m\] \[\e[0;32m\]\$\[\e[m\] '
+update_prompt() {
+    baseprompt='(\[\e[0;32m\]\u\[\e[m\]\[\e[1;34m\]@\[\e[m\]\[\e[0;32m\]\h\[\e[m\]'
+    if [ "$1" == "" ]
+    then
+        localtag=")"
+    else
+        localtag=" \[\e[m\]\[\e[0;33m\]$1\[\e[m\])"
+    fi
+    export PS1="$baseprompt$localtag \[\e[1;34m\]\w\[\e[m\] \[\e[0;32m\]\$\[\e[m\] "
+}
+
+export ORIGINAL_PATH=$PATH
+update_prompt
+$HOME/.update_python_switchers.py
+source $HOME/.python_switchers.bash
