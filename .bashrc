@@ -14,7 +14,6 @@ export CLICOLOR=1
 export GITHUB=https://github.com/TravelledTrojan
 
 # Nice Coloring for prompt with a special tag
-# original: PS1='(\[\e[0;32m\]\u\[\e[m\]\[\e[1;34m\]@\[\e[m\]\[\e[0;32m\]\h\[\e[m\]) \[\e[1;34m\]\w\[\e[m\] \[\e[0;32m\]\$\[\e[m\] '
 update_prompt() {
     baseprompt='\[\e[0;32m\]\u\[\e[m\]\[\e[1;34m\]@\[\e[m\]\[\e[0;32m\]\h\[\e[m\]'
     workingdir='\[\e[1;34m\]\w\[\e[m\]'
@@ -25,7 +24,6 @@ update_prompt() {
     else
         localtag=" \[\e[m\]\[\e[0;33m\]$1\[\e[m\]"
     fi
-    #export PS1="$baseprompt$localtag \[\e[1;34m\]\w\[\e[m\] \[\e[0;32m\]\$\[\e[m\] "
     export PS1="($baseprompt$localtag) $workingdir $promptchar "
 }
 
