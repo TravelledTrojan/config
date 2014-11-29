@@ -24,6 +24,10 @@ set tabstop=4
 set ignorecase
 set smartcase
 
+" highlight searches as the search string is being typed
+set hlsearch
+set incsearch
+
 " map Shift-H/L to moving between tabs
 nnoremap <S-h> gT
 nnoremap <S-l> gt
