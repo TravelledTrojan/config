@@ -15,9 +15,9 @@ export GITHUB=https://github.com/TravelledTrojan
 
 # Nice Coloring for prompt with a special tag
 update_prompt() {
-    baseprompt='\[\e[0;32m\]\u\[\e[m\]\[\e[1;34m\]@\[\e[m\]\[\e[0;32m\]\h\[\e[m\]'
-    workingdir='\[\e[1;34m\]\w\[\e[m\]'
-    promptchar='\[\e[0;32m\]\$\[\e[m\]'
+    baseprompt="\[\e[0;32m\]\u\[\e[m\]\[\e[1;34m\]@\[\e[m\]\[\e[0;32m\]\h\[\e[m\]"
+    workingdir="\[\e[1;34m\]\w\[\e[m\]"
+    promptchar="\[\e[0;32m\]\$\[\e[m\]"
     if [ "$1" == "" ]
     then
         localtag=""
