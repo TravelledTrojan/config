@@ -31,3 +31,4 @@ export ORIGINAL_PATH=$PATH
 update_prompt
 $HOME/.update_python_switchers.py
 source $HOME/.python_switchers.bash
+rm $HOME/.python_switchers.bash
